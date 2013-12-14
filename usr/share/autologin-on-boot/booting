@@ -1,0 +1,6 @@
+#!/bin/sh
+
+mkdir /tmp/autologin-on-boot -m 777 -p
+touch /tmp/autologin-on-boot/login
+chmod 777 /tmp/autologin-on-boot/login
+

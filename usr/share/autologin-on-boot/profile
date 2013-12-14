@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -f /tmp/autologin-on-boot/login ]
+then
+	rm /tmp/autologin-on-boot/login
+	startx
+fi
