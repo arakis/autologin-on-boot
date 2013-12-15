@@ -1,7 +1,5 @@
 #!/bin/sh
 
-#&& -f /etc/autologin-on-boot.conf
-
 if [ -f /tmp/autologin-on-boot/login ]
 then
         USERNAME=$(head -n 1 /etc/autologin-on-boot.conf)
@@ -13,4 +11,3 @@ then
 else
         exec /sbin/agetty --noclear $1
 fi
-
