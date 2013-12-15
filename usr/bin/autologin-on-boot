@@ -2,7 +2,7 @@ echo "Please enter the user name for auto login on every boot."
 echo "Leave it blank to disable auto login."
 echo -n "> "
 read name
-echo $name >> /etc/autologin-on-boot.conf
+echo $name > /etc/autologin-on-boot.conf
 
 if [ -n "$name" ]; then
     systemctl enable autologin-on-boot.service

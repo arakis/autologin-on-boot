@@ -3,9 +3,10 @@ Description=Prepare one time login
 
 [Service]
 Type=oneshot
-ExecStart=-/bin/mkdir /tmp/autologin-on-boot -m 777 -p
-ExecStart=-/bin/touch /tmp/autologin-on-boot/login
-ExecStart=-/bin/chmod 777 /tmp/autologin-on-boot/login
+#ExecStart=-/bin/mkdir /tmp/autologin-on-boot -m 777 -p
+#ExecStart=-/bin/touch /tmp/autologin-on-boot/login
+#ExecStart=-/bin/chmod 777 /tmp/autologin-on-boot/login
+ExecStart=-/usr/share/autologin-on-boot/booting
 
 [Install]
 WantedBy=basic.target
