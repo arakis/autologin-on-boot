@@ -4,8 +4,12 @@
 
 if [ -f /tmp/autologin-on-boot/login ]
 then
-	USERNAME=$(head -n 1 /etc/autologin-on-boot.conf)
-	exec /sbin/agetty --autologin $USERNAME --noclear $1
+        USERNAME=$(head -n 1 /etc/autologin-on-boot.conf)
+        if [ -n "$USERNAME" ]; then
+                exec /sbin/agetty --autologin $USERNAME --noclear $1
+        else
+                exec /sbin/agetty --noclear $1
+        fi
 else
         exec /sbin/agetty --noclear $1
 fi
