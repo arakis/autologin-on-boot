@@ -8,3 +8,7 @@ To set the autologin user, simply execute /bin/autologin-on-boot and enter the u
 The username is stored in /etc/autologin-on-boot.conf. If name needs to be in the first(!) line. If the line is empty or the file is missing, autologin is disabled.
 
 If you wish to execute another application as "startx", simply modify the file /usr/share/autologin-on-boot/profile and replace the line containing startx with an other command.
+
+Dependencies: systemd, xorg-server.
+
+autologin-on-boot works only with systemd (in the moment).
