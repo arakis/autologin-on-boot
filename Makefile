@@ -16,8 +16,8 @@ ETC_DEST = ${DESTDIR}/etc/
 .PHONY: install
 
 install:
-	install -d $(ETC_DEST)
-	install -m644 $(ETC_SRC)autologin-on-boot.conf $(ETC_DEST)
+	#install -d $(ETC_DEST)
+	#install -m644 $(ETC_SRC)autologin-on-boot.conf $(ETC_DEST)
 
 	install -d $(APP_DEST)
 	install -m755 $(APP_SRC)booting $(APP_DEST)
