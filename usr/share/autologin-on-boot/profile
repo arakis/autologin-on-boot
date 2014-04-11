@@ -3,5 +3,5 @@
 if [ -f /tmp/autologin-on-boot/login ]
 then
 	rm /tmp/autologin-on-boot/login
-	startx
+	source /etc/autologin-on-boot.profile
 fi
